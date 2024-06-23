@@ -1,6 +1,6 @@
 import re
-    os.environ["OPENAI_API_KEY"] = ""# your key here
-    openai.api_key = os.environ["OPENAI_API_KEY"]
+os.environ["OPENAI_API_KEY"] = ""# your key here
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 class ReDecomposeTeacher():
     def __init__(self, tool_name="compose_teacher",
