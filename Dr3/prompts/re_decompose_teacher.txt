@@ -1,0 +1,31 @@
+You are a teacher, your student in the process of decomposing a multi-hop QUESTION to several tasks, solve them to the final answer.
+However, there are some mistakes in the STUDENT DECOMPOSITION that the student can not answer the question. e.g., misunderstanding the question, the divided ones are too ambiguous or difficult to the final answer, and so on.
+For every case, you must analyze the question firstly in the ANALYSIS, which contains the understanding of the question, the weaknesses of the student decomposition. After analysis, give a targeted suggestion based on understanding of the problem and students' weaknesses in the ADVICE. Finally, refer to the advice, give a more specific, correct and fluent decomposition in the NEW DECOMPOSITION.
+
+The Input would be the format following:
+QUESTION:(the difficult question)
+STUDENT DECOMPOSITION: (the decomposition from the student)
+
+The Output must be the format following:
+ANALYSIS: (analysis here. Analyze the question and student's decomposition)
+ADVICE: (advice here. Refer to the analysis, give a targeted advice)
+NEW DECOMPOSITION: (new decomposition here. Refer to the advice, give a more specific, correct and fluent than STUDENT DECOMPOSITION)
+
+Here are some examples:
+QUESTION: Is Level 3 Communications headquartered further west than Advanced Micro Devices?
+STUDENT DECOMPOSITION: I need to find the headquarters location of Advanced Micro Devices and Level 3 Communications, and then integrate the information to identify which company is headquartered further west for the final answer.
+ANALYSIS: The answer to the question should be either yes or no, if Level 3 Communications headquartered further west than Advanced Micro Devices, the answer is yes, other is no. The student decomposition tries to "identify which company", the answer delivered from the decomposition will be a company, neither yes nor no, which causes the error.
+ADVICE: I think the tha last step should find whether Level 3 Communications headquartered further west, instead of "identify which company...".
+NEW DECOMPOSITION: I need to find the headquarters location of Advanced Micro Devices and Level 3 Communications, and then find whether Level 3 Communications headquartered further west for the final answer.
+
+QUESTION: Rick Seibold has worked with what artist known for her role in "Big Time Rush"?
+STUDENT DECOMPOSITION: I need to find the artist Rick Seibold has worked with, and then find whether she is known for her role in "Big Time Rush".
+ANALYSIS: The answer to the question should be a name of the artist. The student decomposition will "find whether she is known for...", the answer delivered from the decomposition will be either "yes" or "no", not a name, which leads to the error.
+ADVICE: I think the last step of the decomposition should find the artist rather than "find whether she is known for..."
+NEW DECOMPOSITION: I need to find the artist who Rick Seibold worked with, known for her role in "Big Time Rush", and then integrate the information to find the artist for the final answer.
+
+QUESTION: In what city was the rock band formed which was paid tribute by Listen Without Distraction?
+STUDENT DECOMPOSITION: I need to find the city where the rock band was formed, and then answer the question with the city.
+ANALYSIS: The answer to the question should be a city where the rock band formed, and the rock band was paid tribute by Listen Without Distraction. The student decomposition ignores some information from the question, which only said "the rock band", not said what the rock band is.
+ADVICE: I think the new decomposition should specific the "the rock band Listen Without Distraction was paid tribute" instead of "the rock band" only.
+NEW DECOMPOSITION: I need to find the rock band Listen Without Distraction was paid tribute, and then find the city where the rock band formed for the final answer.

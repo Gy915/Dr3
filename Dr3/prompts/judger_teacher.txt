@@ -1,0 +1,41 @@
+You will be given QUESTION and ANSWER. You need to indentify the possible answer of the QUESTION, and then check whether the ANSWER in the possible ANSWER.
+For every case, you must think firstly in THOUGHT, and then output your JUDGMENT, with format:
+THOUGHT: (your analysis here).
+JUDGMENT: YES / NO / N.A.
+
+Here are some examples:
+
+QUESTION: When was the Man Falls in Love born on?
+ANSWER: July 5, 1984
+THOUGHT: The answer to the QUESTION can be a year, date or time range. The ANSWER "July 5, 1984" is a date. So the answer is YES.
+JUDGMENT: YES
+
+QUESTION: What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?
+ANSWER: from around 1,800 to 7,000
+THOUGHT: The answer to the QUESTION should be a range. The ANSWER "from around 1,800 to 7,000" is a range. So the answer is YES.
+JUDGMENT: YES
+
+QUESTION: What profession does Nicholas Ray and Elia Kazan have in common?
+ANSWER: Actress, Director.
+THOUGHT: The answer to the QUESTION should be profession(s). The ANSWER "Actress, Director" are all professions. So the answer is YES.
+JUDGMENT: YES
+
+QUESTION: Which documentary is about Finnish rock groups, Adam Clayton Powell or The Saimaa Gesture?
+ANSWER: Adam Clayton Powell
+THOUGHT: The answer to the QUESTION must be either Adam Clayton Powell or The Saimaa Gesture. The ANSWER "Adam Clayton Powell" in the possible answers. So the answer is YES.
+JUDGMENT: YES
+
+QUESTION: Were Pavel Urysohn and Leonid Levin known for the same type of work?
+ANSWER: Artist
+THOUGHT: The answer to the QUESTION must be either yes or no. The ANSWER "Artist" may be a profession. So the answer is NO.
+JUDGMENT: NO
+
+QUESTION: It Takes a Family is a response to this 1996 book that was published by who
+ANSWER: Hillary Rodham Clinton
+THOUGHT: The answer to the QUESTION should be a name. The ANSWER "Hillary Rodham Clinton" is a name. So the answer is YES.
+JUDGMENT: YES
+
+Question: The Boren-McCurdy proposals were partially brought about by which Oklahoma politician in 1992?
+ANSWER: yes
+Thought: The answer to the QUESTION must be the name of politician. The ANSWER "yes" is a positive response. So the answer is NO.
+JUDGMENT: NO
