@@ -1,5 +1,6 @@
 import re
-
+    os.environ["OPENAI_API_KEY"] = ""# your key here
+    openai.api_key = os.environ["OPENAI_API_KEY"]
 
 class ReDecomposeTeacher():
     def __init__(self, tool_name="compose_teacher",
@@ -36,8 +37,6 @@ class ReDecomposeTeacher():
 if __name__ == '__main__':
     import os, openai
 
-    os.environ["OPENAI_API_KEY"] = "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"
-    openai.api_key = os.environ["OPENAI_API_KEY"]
     re_decompose = ReDecomposeTeacher()
     # question = "Which professional tennis player was born first, Lucie Hradecká or Raffaella Reggi?"
     # decompose = "I need to find the birth time of Lucie Hradecká and Raffaella Reggi, and then integrate the information to find which one was born first for the final answer."
